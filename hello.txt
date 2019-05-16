@@ -1,0 +1,10 @@
+#!/usr/bin/python
+import os
+
+if os.path.exists("/etc/redhat-release"):
+    print("This is a redhat family machine")
+    install_packages = ["git","tree","wget"]
+    for items in install_packages:
+        print("Installing %s" %items)
+else:
+    print("This is an Debain/ubuntu family")
